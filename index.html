@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="./images/logo/faveicon.jpg"
+         type="image/x-icon">
+      <link rel="stylesheet" href="assets/fontaswesome/all.min.css" />
+      <link rel="stylesheet" href="./assets/fontaswesome/css/all.min.css" />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
+      <link rel="stylesheet"
+         href="./assets/fontaswesome/css/fontawesome.min.css" />
+      <link rel="stylesheet" href="./css/custom.css">
+      <link href="./css/tailwind.css" rel="stylesheet" />
+      <title>Bostami Tailwind CSS Personal Portfolio HTML Template </title>
+   </head>
+   <body>
+      <div class=" bg-fixed bg-no-repeat ">
+         <header class=" py-6 ">
+            <div class="container flex justify-between items-center px-4
+               relative">
+               <div class=" ">
+                  <img class="w-[150px] md:w-[200px] "
+                     src="./images/Logo.png" alt="">
+               </div>
+               <!-- mobile munu -->
+               <ul id="menu" class=" bg-white md:bg-transparent w-full md:w-auto absolute left-0
+                  top-[58px] px-8 z-50 origin-top time invisible opacity-0
+                  transform scale-y-0 md:right-0 md:visible md:opacity-100
+                  md:scale-y-100 md:static md:flex md:items-center md:justify-center
+                  md:gap-[38px] lg:gap-[58px] ">
+                  <li class="link  "><a class="link-2 time border-[#FF834F]"
+                     href="./index.html">Home</a></li>
+                  <li class="link"><a class="link-2 time"
+                     href="./courses.html">Courses</a></li>
+                  <li class="link"><a class="link-2 time"
+                     href="./resources.html">Resources</a></li>
+                  <li class="link"><a class="link-2 time"
+                     href="./blog.html">Blog</a></li>
+                  <li class="link"><a class="link-2 time"
+                     href="./sustainability.html">Sustainability</a></li>
+                  <!-- only view in phone -->
+                  <li class="block md:hidden"> <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="flex mx-auto md:hidden items-center justify-center
+                     px-[30px] py-[10px] border border-white text-black
+                     font-medium rounded-lg hover:bg-hovercolor time
+                     hover:text-white">
+                     Login
+                     </button>
+                  </li>
+                  <!-- only view in phone -->
+                  <li class="block md:hidden"> <button ata-modal-target="authentication-modal-2" data-modal-toggle="authentication-modal-2" class="flex mx-auto md:hidden items-center justify-center
+                     px-[30px] py-[10px] border border-white font-medium
+                     rounded-lg bg-hovercolor text-white">
+                     Sign up
+                     </button>
+                  </li>
+               </ul>
+               <div>
+                  <!-- only view in desktop -->
+                  <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="hidden md:inline-flex items-center justify-center
+                     px-[30px] py-[10px] border border-white text-black
+                     font-medium rounded-lg hover:bg-hovercolor time
+                     hover:text-white">
+                  Login
+                  </button>
+                  <!-- only view in desktop -->
+                  <button ata-modal-target="authentication-modal-2" data-modal-toggle="authentication-modal-2" class="hidden md:inline-flex items-center justify-center
+                     px-[30px] py-[10px] border border-white font-medium
+                     rounded-lg bg-hovercolor text-white">
+                  Sign up
+                  </button>
+               </div>
+               <!-- open and colse icon -->
+               <span id="open" class="md:hidden"><i class="fa-solid
+                  text-black fa-bars"></i></span>
+               <span id="colse" class="hidden"><i class="fa-solid
+                  fa-xmark"></i></span>
+            </div>
+         </header>
+      </div>
+      <!-- modal for Login  button -->
+      <!-- Main modal -->
+      <div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+         <div class="relative w-full h-full max-w-[740px] md:h-auto">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+               <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="authentication-modal">
+                  <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+               </button>
+               <div class="px-6 py-6 lg:py-12 lg:px-12">
+                  <h3 class="mb-8 text-xl md:text-[40px] font-medium text-center text-gray-900 dark:text-white">Login</h3>
+                  <form class="space-y-4" action="#">
+                     <div>
+                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-[25px] dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Email or Username" required>
+                     </div>
+                     <div>
+                        <input type="password" name="password" id="password" placeholder="Password" class="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-[25px] dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                     </div>
+                     <div class="flex justify-between items-center pt-[40px]">
+                        <button class="hidden md:inline-flex items-center justify-center
+                           px-[66px] py-[20px] border border-white font-medium
+                           rounded-2xl bg-hovercolor text-white">
+                        Login
+                        </button>
+                        <p  class=" no-underline text-black hover:underline ">Don’t have an account? <a class="text-hovercolor no-underline" href="">Signup</a></p>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- modal for Sign up button -->
+      <!-- Main modal -->
+      <div id="authentication-modal-2" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+         <div class="relative w-full h-full max-w-[740px] md:h-auto">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+               <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="authentication-modal-2">
+                  <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+               </button>
+               <div class="px-6 py-6 lg:py-12 lg:px-12">
+                  <h3 class="mb-8 text-xl md:text-[40px] font-medium text-center text-gray-900 dark:text-white">Sign up</h3>
+                  <form class="space-y-4" action="#">
+                     <div>
+                        <input type="text" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-[25px] dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Name" required>
+                     </div>
+                     <div>
+                        <input type="email" name="password" id="password" placeholder="Email" class="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-[25px] dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                     </div>
+                     <div>
+                        <input type="text" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-[25px] dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Address" required>
+                     </div>
+                     <div>
+                        <input type="password" name="password" id="password" placeholder="Create a password" class="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-[25px] dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                     </div>
+                     <div class="flex justify-between items-center pt-[40px]">
+                        <button class="hidden md:inline-flex items-center justify-center
+                           px-[66px] py-[20px] border border-white font-medium
+                           rounded-2xl bg-hovercolor text-white">
+                        Sign up
+                        </button>
+                        <p  class="hover:no-underline no-underline text-black">Don’t have an account? <a class="text-hovercolor no-underline" href="">Login </a></p>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- main section start -->
+      <main>
+         <!-- Coding Lessons section start -->
+         <section class="py-10 md:py-[100px]">
+            <div class="container">
+               <div class="grid grid-cols-12 gap-6 items-center ">
+                  <div class="lg:col-span-1 col-span-12"></div>
+                  <div class="col-span-12 md:col-span-7 lg:col-span-6">
+                     <div>
+                        <h1 class="text-[35px] md:text-[64px]
+                           md:leading-[85px] leading-10 ">Coding Lessons For
+                           Your <span class="text-green">Kids</span>
+                        </h1>
+                        <p class="leading-6 pt-3 pb-12 lg:pr-16 ">Code
+                           Haven offers effective and engaging lessons
+                           that ignite your childs love for computer
+                           science. We offer numerous courses that
+                           teach coding while
+                           keeping your child entertained.
+                        </p>
+                        <button class="inline-flex items-center
+                           justify-center
+                           md:px-10 px-6 py-[18px] border border-white
+                           font-medium
+                           rounded-lg bg-hovercolor text-white">
+                        Start Lessons
+                        </button>
+                        <button class="inline-flex items-center
+                           justify-center
+                           md:pl-10 pl-6 border border-white font-medium
+                           rounded-lg text-black gap-4">
+                        <span class="w-[52px] h-[52px] rounded-full
+                           shadow-icon flex justify-center
+                           items-center "><i class="fa-solid
+                           text-[#94B95A] fa-play"></i></span>
+                        Watch Demo
+                        </button>
+                     </div>
+                  </div>
+                  <div class=" md:col-span-5 lg:col-span-4 col-span-12">
+                     <div>
+                        <img class="w-full" src="./images/Frame.png"
+                           alt="">
+                     </div>
+                  </div>
+                  <div class="lg:col-span-1 col-span-12"></div>
+               </div>
+            </div>
+         </section>
+         <!-- Coding Lessons section End -->
+         <!-- Write Coding section Start -->
+         <section class="pt-[43px] pb-[50px]">
+            <div class="container">
+               <div class="grid grid-cols-12 gap-6 items-center">
+                  <div class="col-span-12 md:col-span-6">
+                     <h2 class="md:text-[40px] text-[25px] ">Write <span
+                        class="text-[#DC82A2]">Codes.</span> </h2>
+                     <p class="pt-3 leading-6 md:pr-[50px]
+                        lg:pr-[80px] xl:pr-[180px]">Through our innovative program,
+                        your child will learn different coding languages
+                        from the ground up. They will explore through
+                        our immersive world filled
+                        with never-ending adventure packed with
+                        essential coding knowledge. As they progress,
+                        their knowledge in coding will increase along
+                        with their love for
+                        computers. <br> <br>
+                        This will provide them with a enriched basis of
+                        knowledge that will allow them to thrive in a
+                        technologically advancing world.
+                     </p>
+                  </div>
+                  <div class="col-span-12 relative md:col-span-6">
+                     <img class="w-full" src="./images/Rectangle.png" alt="">
+                     <span class="absolute top-1/2 left-1/2 transform
+                        -translate-x-1/2 -translate-y-1/2"><i
+                        class="fa-solid text-[#ffffff] opacity-80
+                        text-5xl fa-play"></i></span>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Write Coding section End -->
+         <!-- Why Choose Code haven section Start -->
+         <section class="py-[50px]">
+            <div class="container">
+               <div class="grid grid-cols-12">
+                  <div class="lg:col-span-1 col-span-12"></div>
+                  <div class="col-span-12 lg:col-span-10">
+                     <div class="text-center">
+                        <h2 class="md:text-[40px] text-[25px] ">Why
+                           Choose <span class="text-green-lite">Code
+                           Haven</span>? 
+                        </h2>
+                        <p class="pt-3 leading-6">Our passionate team
+                           have created a unique method of teaching
+                           that will create a brand new expierence with
+                           coding education. Our courses use
+                           envigorating cartoons that interconnect with
+                           coding knowledge and sustainability elements
+                           to teach. We are dedicated to bringing Fun,
+                           Knowledge and Awareness together and strive
+                           to provide your child with a concrete
+                           education.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="lg:col-span-1 col-span-12"></div>
+               </div>
+               <div class="grid grid-cols-12">
+                  <div class="lg:col-span-1 col-span-12"></div>
+                  <div class="col-span-12 lg:col-span-10">
+                     <div class="grid grid-cols-12 gap-8 mt-[30px]">
+                        <div class="md:col-span-6 col-span-12 lg:col-span-4 h-full">
+                           <div class="py-[30px] pl-10 pr-5  rounded-2xl shadow-box
+                              text-center mx-auto  flex flex-col justify-between">
+                              <div>
+                                 <img class="mx-auto" src="./images/Fram.png" alt="">
+                                 <h4 class="text-[22px] font-semibold py-[10px]">Teachers</h4>
+                                 <p class="text-left leading-7 ">Looking for a way to teach
+                                    students Coding without stressing? Our
+                                    intuitive and engaging program can guide
+                                    students through coding and provide
+                                    peace-of-mind for teachers.
+                                    We provide a strong and synchronised course
+                                    that allow students to always work on the
+                                    same page.
+                                    Our classes can help provide basic knowledge
+                                    and allow the effective teaching of more
+                                    advanced concept
+                                 </p>
+                              </div>
+                              <a class="pt-[22px] block font-medium text-[#EB6F46] "
+                                 href="http://"
+                                 target="_blank" rel="noopener noreferrer">See
+                              details<i class="fa-solid ml-1
+                                 fa-arrow-right"></i></a>
+                           </div>
+                        </div>
+                        <div class="md:col-span-6 col-span-12 lg:col-span-4">
+                           <div class="py-[30px] pl-10 pr-5 rounded-2xl shadow-box
+                              text-center mx-auto h-full  flex flex-col justify-between">
+                              <div>
+                                 <img class="mx-auto h-[167px] " src="./images/Fram.png" alt="">
+                                 <h4 class="text-[22px] font-semibold py-[10px]">Teachers</h4>
+                                 <p class="text-left leading-7 ">Looking for a way to teach
+                                    students Coding without stressing? Our
+                                    intuitive and engaging program can guide
+                                    students through coding and provide
+                                    peace-of-mind for teachers.
+                                    We provide a strong and synchronised course
+                                    that allow students to always work on the
+                                    same page.
+                                    Our classes 
+                                 </p>
+                              </div>
+                              <a class="pt-[22px] block font-medium text-[#94B95A] "
+                                 href="http://"
+                                 target="_blank" rel="noopener noreferrer">See
+                              details<i class="fa-solid ml-1
+                                 fa-arrow-right"></i></a>
+                           </div>
+                        </div>
+                        <div class="md:col-span-6 col-span-12 lg:col-span-4">
+                           <div class="py-[30px] pl-10 pr-5 rounded-2xl shadow-box
+                              text-center mx-auto h-full  flex flex-col justify-between">
+                              <div>
+                                 <img class="mx-auto h-[167px] " src="./images/Fram.png" alt="">
+                                 <h4 class="text-[22px] font-semibold py-[10px]">Teachers</h4>
+                                 <p class="text-left leading-7 ">Looking for a way to teach
+                                    students Coding without stressing? Our
+                                    intuitive and engaging program can guide
+                                    students through coding and provide
+                                    peace-of-mind for teachers.
+                                    We provide a strong and synchronised course
+                                    that allow students to always work on the
+                                    same page.
+                                    Our classes 
+                                 </p>
+                              </div>
+                              <a class="pt-[22px] block font-medium text-[#80B4FF] "
+                                 href="http://"
+                                 target="_blank" rel="noopener noreferrer">See
+                              details<i class="fa-solid ml-1
+                                 fa-arrow-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="lg:col-span-1 col-span-12"></div>
+               </div>
+            </div>
+         </section>
+         <!-- Why Choose Code haven section End -->
+         <!-- Teach kids courses section Start -->
+         <section class="py-[50px]">
+            <div class="container">
+               <div>
+                  <h2 class="md:text-[40px] text-center text-[25px] ">Teach kids courses that are <br>
+                     <span class="text-[#FF834F]">intuitive</span> 
+                  </h2>
+               </div>
+               <div class="grid grid-cols-12 gap-8 mt-[30px]">
+                  <div class="md:col-span-6 col-span-12 lg:col-span-3 h-full">
+                     <div class="p-3  rounded-2xl shadow-box
+                        mx-auto ">
+                        <img class="mx-auto w-full" src="./images/Rectangle 15 (1).png" alt="">
+                        <h4 class="font-semibold pt-[13px]">Beginners C++ Course for 6 to 12 year olds</h4>
+                        <a class="mt-[15px] px-[22px] py-[11px] inline-block font-medium border rounded-lg text-black border-[#EB6F46] "
+                           href="http://"
+                           target="_blank" rel="noopener noreferrer">See
+                        details</a>
+                     </div>
+                  </div>
+                  <div class="md:col-span-6 col-span-12 lg:col-span-3 h-full">
+                     <div class="p-3  rounded-2xl shadow-box
+                        mx-auto ">
+                        <img class="mx-auto w-full" src="./images/Rectangle 15 (1).png" alt="">
+                        <h4 class="font-semibold pt-[13px]">Beginners C++ Course for 6 to 12 year olds</h4>
+                        <a class="mt-[15px] px-[22px] py-[11px] inline-block font-medium border rounded-lg text-black border-[#EB6F46] "
+                           href="http://"
+                           target="_blank" rel="noopener noreferrer">See
+                        details</a>
+                     </div>
+                  </div>
+                  <div class="md:col-span-6 col-span-12 lg:col-span-3 h-full">
+                     <div class="p-3  rounded-2xl shadow-box
+                        mx-auto ">
+                        <img class="mx-auto w-full" src="./images/Rectangle 15 (1).png" alt="">
+                        <h4 class="font-semibold pt-[13px]">Beginners C++ Course for 6 to 12 year olds</h4>
+                        <a class="mt-[15px] px-[22px] py-[11px] inline-block font-medium border rounded-lg text-black border-[#EB6F46] "
+                           href="http://"
+                           target="_blank" rel="noopener noreferrer">See
+                        details</a>
+                     </div>
+                  </div>
+                  <div class="md:col-span-6 col-span-12 lg:col-span-3 h-full">
+                     <div class="p-3  rounded-2xl shadow-box
+                        mx-auto ">
+                        <img class="mx-auto w-full" src="./images/Rectangle 15 (1).png" alt="">
+                        <h4 class="font-semibold pt-[13px]">Beginners C++ Course for 6 to 12 year olds</h4>
+                        <a class="mt-[15px] px-[22px] py-[11px] inline-block font-medium border rounded-lg text-black border-[#EB6F46] "
+                           href="http://"
+                           target="_blank" rel="noopener noreferrer">See
+                        details</a>
+                     </div>
+                  </div>
+               </div>
+               <button class="block mx-auto mt-[43px] text-center items-center justify-center
+                  px-[35px] py-[18px] border border-white font-medium
+                  rounded-lg bg-hovercolor text-white">
+               See all courses
+               </button>
+            </div>
+         </section>
+         <!-- Teach kids courses section End -->
+         <!--Our Approach section Start -->
+         <section class="py-[50px]">
+            <div class="container">
+               <div class="grid grid-cols-12">
+                  <div class="lg:col-span-1"></div>
+                  <div class="col-span-12 lg:col-span-10">
+                     <div class="text-center">
+                        <h2 class="md:text-[40px] text-[25px] ">Our Approach to
+                           <br>  <span class="text-green">teaching</span> 
+                        </h2>
+                        <p class="pt-3 leading-6">We believe that a key component to effective and responsive teaching is engagement and fun. Our course follows this vision by using entertaining cartoons to teach your child Coding. Maintaining the balance between entertainment and
+                           learning, the course allows your child to have fun while also teaching them key components of basic
+                           knowledge for select languages. 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="lg:col-span-1"></div>
+               </div>
+            </div>
+         </section>
+         <!--Our Approach section End -->
+         <!--FAQs section Start -->
+         <section>
+            <div class="container">
+               <!-- faq -->
+               <div class=" lg:w-[66%] w-full mx-auto pt-[80px] md:pt-[80px]">
+                  <h1 class="md:text-[40px] text-[25px]  font-semibold text-center py-8 ">FAQs</h1>
+                  <div id="accordion-collapse" data-accordion="collapse">
+                     <div class="border rounded-2xl border-[#94B95A] mb-4 bg-white">
+                        <h4 id="accordion-collapse-heading-1">
+                           <button type="button" class="flex items-center justify-between w-full  font-semibold px-5 py-7  text-left text-black" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                              <span class="text-black">Are there any prerequisites required to take this course?</span>
+                              <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                              </svg>
+                           </button>
+                        </h4>
+                        <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                           <div class="p-5 pt-0 font-light -mt-4">
+                              <p class="mb-2 text-black">No! Our course is designed to teach your child basic knowledge from the ground up and will not require any previous knowledge on computers</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="border rounded-2xl border-[#94B95A] mb-4 bg-white">
+                        <h4 id="accordion-collapse-heading-2">
+                           <button type="button" class="flex items-center justify-between w-full  font-semibold px-5 py-7  text-left text-black" data-accordion-target="#accordion-collapse-body-2" aria-expanded="true" aria-controls="accordion-collapse-body-2">
+                              <span class="text-black">Can I learn to play the guitar if I have no musical experience?</span>
+                              <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                              </svg>
+                           </button>
+                        </h4>
+                        <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                           <div class="p-5 pt-0 font-light -mt-4">
+                              <p class="mb-2 text-black">Of course! Even if you have two left hands and can't carry a tune in a bucket, we'll do our best to turn you into a guitar pro.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="border rounded-2xl border-[#94B95A] mb-4 bg-white">
+                        <h4 id="accordion-collapse-heading-3">
+                           <button type="button" class="flex items-center justify-between w-full  font-semibold px-5 py-7  text-left text-black" data-accordion-target="#accordion-collapse-body-3" aria-expanded="true" aria-controls="accordion-collapse-body-3">
+                              <span class="text-black">Can I learn to play the guitar if I have no musical experience?</span>
+                              <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                              </svg>
+                           </button>
+                        </h4>
+                        <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+                           <div class="p-5 pt-0 font-light -mt-4">
+                              <p class="mb-2 text-black">Of course! Even if you have two left hands and can't carry a tune in a bucket, we'll do our best to turn you into a guitar pro.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="border rounded-2xl border-[#94B95A] mb-4 bg-white">
+                        <h4 id="accordion-collapse-heading-4">
+                           <button type="button" class="flex items-center justify-between w-full  font-semibold px-5 py-7  text-left text-black" data-accordion-target="#accordion-collapse-body-4" aria-expanded="true" aria-controls="accordion-collapse-body-4">
+                              <span class="text-black">Can I learn to play the guitar if I have no musical experience?</span>
+                              <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                              </svg>
+                           </button>
+                        </h4>
+                        <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
+                           <div class="p-5 pt-0 font-light -mt-4">
+                              <p class="mb-2 text-black">Of course! Even if you have two left hands and can't carry a tune in a bucket, we'll do our best to turn you into a guitar pro.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="border rounded-2xl border-[#94B95A] mb-4 bg-white">
+                        <h4 id="accordion-collapse-heading-5">
+                           <button type="button" class="flex items-center justify-between w-full  font-semibold px-5 py-7  text-left text-black" data-accordion-target="#accordion-collapse-body-5" aria-expanded="true" aria-controls="accordion-collapse-body-5">
+                              <span class="text-black">Can I learn to play the guitar if I have no musical experience?</span>
+                              <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                              </svg>
+                           </button>
+                        </h4>
+                        <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+                           <div class="p-5 pt-0 font-light -mt-4">
+                              <p class="mb-2 text-black">Of course! Even if you have two left hands and can't carry a tune in a bucket, we'll do our best to turn you into a guitar pro.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <button class="mx-auto underline text-lg font-semibold mt-[30px] block">See all FAQs</button>          
+               </div>
+               <div class="  lg:w-[66%] w-full mx-auto mb-[60px] pt-[80px] md:pt-[80px]">
+                  <div class="grid lg:grid-cols-4 md:grid-cols-2 col-span-1 gap-4">
+                     <div class="col-span-1 text-center">
+                        <h2 class="text-[40px] md:text-[60px] text-[#80B4FF] ">145M+</h2>
+                        <p class="text-[22px] font-semibold ">Levels solved</p>
+                     </div>
+                     <div class="col-span-1 text-center">
+                        <h2 class="text-[40px] md:text-[60px] text-[#80B4FF] ">145M+</h2>
+                        <p class="text-[22px] font-semibold ">Levels solved</p>
+                     </div>
+                     <div class="col-span-1 text-center">
+                        <h2 class="text-[40px] md:text-[60px] text-[#80B4FF] ">145M+</h2>
+                        <p class="text-[22px] font-semibold ">Levels solved</p>
+                     </div>
+                     <div class="col-span-1 text-center">
+                        <h2 class="text-[40px] md:text-[60px] text-[#80B4FF] ">145M+</h2>
+                        <p class="text-[22px] font-semibold ">Levels solved</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            </div>
+         </section>
+         <!--FAQs section End -->
+      </main>
+      <!-- main section end -->
+      <!--Footer section Start -->
+      <footer class="bg-footer bg-no-repeat bg-cover pt-[160px] md:pt-[210px]">
+         <div class="container">
+            <div class="grid grid-cols-12 gap-4 pb-[50px]">
+               <div class="col-span-12 md:col-span-4">
+                  <div>
+                     <img class="w-[270px]" src="./images/Logo (1).png" alt="">
+                     <p class="pt-[26px] text-white pb-[46px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                     <ul class="space-x-5 flex ">
+                        <li><a href=""><i class="fa-brands text-green text-xl fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands text-green text-xl fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands text-green text-xl fa-linkedin"></i></a></li>
+                        <li><a href=""><i class="fa-brands text-green text-xl fa-facebook-f"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-span-6 md:col-span-2">
+                  <h3 class="text-white text-xl mb-3">Company</h3>
+                  <ul class="space-y-2">
+                     <li><a class="text-white" href="">About Us</a></li>
+                     <li><a class="text-white" href="">Blog</a></li>
+                     <li><a class="text-white" href="">Jobs</a></li>
+                     <li><a class="text-white" href="">Press</a></li>
+                     <li><a class="text-white" href="">Partners</a></li>
+                     <li><a class="text-white" href="">User Reviews</a></li>
+                  </ul>
+               </div>
+               <div class="col-span-6 md:col-span-2">
+                  <h3 class="text-white text-xl mb-3">Curriculum</h3>
+                  <ul class="space-y-2">
+                     <li><a class="text-white" href="">Courses</a></li>
+                     <li><a class="text-white" href="">Standards</a></li>
+                     <li><a class="text-white" href="">Hour of Code</a></li>
+                     <li><a class="text-white" href="">Summer Camp</a></li>
+                     <li><a class="text-white" href="">Going Bananas</a></li>
+                     <li><a class="text-white" href="">Microsoft Store</a></li>
+                  </ul>
+               </div>
+               <div class="col-span-6 md:col-span-2">
+                  <h3 class="text-white text-xl mb-3">Educators</h3>
+                  <ul class="space-y-2">
+                     <li><a class="text-white" href="">Teachers</a></li>
+                     <li><a class="text-white" href="">Parents</a></li>
+                     <li><a class="text-white" href="">Ambassadors</a></li>
+                     <li><a class="text-white" href="">Webinars</a></li>
+                     <li><a class="text-white" href="">Code Rush</a></li>
+                     <li><a class="text-white" href="">CB Competition</a></li>
+                  </ul>
+               </div>
+               <div class="col-span-6 md:col-span-2">
+                  <h3 class="text-white text-xl mb-3">Support</h3>
+                  <ul class="space-y-2">
+                     <li><a class="text-white" href="">Help Center</a></li>
+                     <li><a class="text-white" href="">Contact Us</a></li>
+                     <li><a class="text-white" href="">FAQ</a></li>
+                  </ul>
+               </div>
+            </div>
+            <p class="text-center pb-8 text-white">All rights reserved to Code Haven</p>
+         </div>
+      </footer>
+      <!--Footer section Start -->
+      <!-- jquary add -->
+      <script src="./js/vendor/jquary.min.js"></script>
+      <!-- flowbite add -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+      <!-- main js add -->
+      <script src="./js/main.js"></script>
+   </body>
+</html>

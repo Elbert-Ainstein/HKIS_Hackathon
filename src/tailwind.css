@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+
+@layer components {
+  .time{
+    @apply transition-all duration-300 ease-linear ;
+  }
+  .link-2{
+    @apply border-b pb-2 hover:border-[#FF834F] border-white py-3  font-medium text-black
+  }
+  .link{
+    @apply py-2 md:py-0 text-center 
+  }
+  .after-effect {
+    @apply text-[55px] font-bold  inline-block relative after:absolute after:left-[50%]  transform after:-translate-x-[50%] after:bg-gradient-to-r from-[#FA5252] to-[#DD2476] after:h-0.5 after:rounded-md after:content-[""] md:after:w-28  after:top-[100%] dark:text-white;
+  }
+ 
+ 
+
+}
+
+
+/* const open=  document.getElementById("open")
+const colse=  document.getElementById("colse")
+const menu=  document.getElementById("menu")
+
+open.addEventListener("click", ()=>{
+    console.log("okk");
+    menu.classList.add('invisible','opacity-100','scale-y-100')
+    menu.classList.remove('invisible','opacity-0' ,'transform','scale-y-0')
+    open.classList.remove('block')
+    open.classList.add('hidden')
+    colse.classList.add('block')
+    colse.classList.remove('hidden')
+})
+colse.addEventListener("click", ()=>{
+    console.log("okk");
+    menu.classList.remove('invisible','opacity-100','scale-y-100')
+    menu.classList.add('invisible','opacity-0' ,'transform','scale-y-0')
+    open.classList.add('block')
+    open.classList.remove('hidden')
+    colse.classList.remove('block')
+    colse.classList.add('hidden')
+}) */
+
+
