@@ -67,7 +67,9 @@
   },
 
 
-    "scripts":{"start": "tailwindcss build -i ./src/tailwind.css -o ./css/tailwind.css --watch"}
+    "scripts": {
+      "start": "tailwindcss build -i ./src/tailwind.css -o ./css/tailwind.css --watch"
+    }
 
   ,
   "keywords": [],
