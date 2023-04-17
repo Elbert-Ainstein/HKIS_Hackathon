@@ -33,7 +33,7 @@
   <h3 align="center">The Discord bot</h3>
 
   <p align="center">
-    An awesome investing simulator that tracks real market data!
+    An awesome chatbot!
     <br />
     <a href="https://discord.com/api/oauth2/authorize?client_id=1088434141651017818&permissions=8&scope=bot"><strong>Invite the bot to get started »</strong></a>
     <br />
