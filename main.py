@@ -32,6 +32,10 @@ async def on_ready():
     # Notify us when everything is ready!
     # We are logged in and ready to chat and use commands...
     print(f'Logged in as | {bot.user.name}')
+    
+    
+    
+    # The voice channel ID you want the bot to join
     vc = await bot.get_channel(889411465788948491).connect()
     print(vc)
 
